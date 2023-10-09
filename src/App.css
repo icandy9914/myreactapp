@@ -6,6 +6,7 @@
   height: 40vmin;
   pointer-events: none;
 }
+.firstClass{font-weight: bold;}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
