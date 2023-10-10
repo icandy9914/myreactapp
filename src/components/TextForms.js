@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 export default function TextForms(props) {
-    const handleClick = ()=> {
+    const handleClick = ()=> { 
         console.log("you clicked" + mytxt);
         let newTxt = mytxt.toUpperCase();
         setText(newTxt);
