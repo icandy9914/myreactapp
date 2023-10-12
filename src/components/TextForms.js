@@ -20,6 +20,10 @@ export default function TextForms(props) {
                 <button className="btn btn-primary" onClick={handleClick}>Process now</button>
             </div>
         </div>
+        <div className="container">
+            <h2>Your Text Summary</h2>
+            <p>{mytxt.split(" ").length} words & {mytxt.length} characters</p>
+        </div>
         </>
     )
 }
