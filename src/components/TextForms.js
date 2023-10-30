@@ -35,8 +35,8 @@ export default function TextForms(props) {
     const [mytxt, setText] = useState('Enter Text here...');
     return (
         <>
-        <div className="container">
-            <h1>{props.headingTxt} - </h1>
+        <div className="container" data-bs-theme={`${props.mode==='light'?'light':'dark'}`}>
+            <h1 className={`text-${props.mode==='light'?'dark':'light'}`}>{props.headingTxt} - </h1>
             <div className="mb-3">
                 <textarea value={mytxt} className="form-control my-3" id="exampleFormControlTextarea1" rows="10" onChange={handleUpdate}>{mytxt}</textarea>
                 <button className="btn btn-primary mx-2" onClick={handleUpperClick}>Convert to Uppercase</button>
@@ -47,12 +47,12 @@ export default function TextForms(props) {
                 
             </div>
         </div>
-        <div className="container">
-            <h2>Your Text Summary</h2>
-            <p>{mytxt.split(" ").length} words & {mytxt.length} characters</p>
-            <p>{0.008 * mytxt.split(" ").length} Minutes took to read</p>
-            <h3>Preview Text</h3>
-            <p>{mytxt}</p>
+        <div className="container" data-bs-theme={`${props.mode==='light'?'light':'dark'}`}>
+            <h2 className={`text-${props.mode==='light'?'dark':'light'}`}>Your Text Summary</h2>
+            <p className={`text-${props.mode==='light'?'dark':'light'}`}>{mytxt.split(" ").length} words & {mytxt.length} characters</p>
+            <p className={`text-${props.mode==='light'?'dark':'light'}`} >{0.008 * mytxt.split(" ").length} Minutes took to read</p>
+            <h3 className={`text-${props.mode==='light'?'dark':'light'}`}>Preview Text</h3>
+            <p className={`text-${props.mode==='light'?'dark':'light'}`}>{mytxt}</p>
         </div>
         </>
     )
